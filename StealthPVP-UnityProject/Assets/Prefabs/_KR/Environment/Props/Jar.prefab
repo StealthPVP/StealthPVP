@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4126955855703625959}
   - component: {fileID: -5258285071609254701}
   m_Layer: 0
-  m_Name: Jar_Color1
+  m_Name: Jar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

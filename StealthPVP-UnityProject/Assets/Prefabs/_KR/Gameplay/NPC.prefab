@@ -6378,7 +6378,7 @@ MonoBehaviour:
   ragdollBodies: []
   disableAnimatorOnRagdoll: 1
   initializeAsKinematic: 1
-  deathImpulseForce: 12
+  deathImpulseForce: 33
   impulseMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6394,14 +6394,14 @@ MonoBehaviour:
   navMeshAgent: {fileID: 0}
   behavioursToDisable: []
   cameraShake: {fileID: 0}
-  lethalShakeMagnitude: 0.05
+  lethalShakeMagnitude: 0.9
   lethalShakeDuration: 0.2
   debugLogs: 0
   freezeAndCleanupOnRagdoll: 1
   freezeAfterFrames: 120
   destroyDelayAfterFreeze: 2
   npcDeadTriggerName: NPCDead
-  ragdollGravityMultiplier: 2.2
+  ragdollGravityMultiplier: 1.8
 --- !u!195 &1303794103584574667
 NavMeshAgent:
   m_ObjectHideFlags: 0

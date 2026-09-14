@@ -5935,6 +5935,9 @@ MonoBehaviour:
   walkingBoolName: isWalking
   idleBoolName: isIdle
   runningBoolName: isRunning
+  runningBackwardBoolName: isRunningBackward
+  strafingBoolName: isStrafing
+  strafeDirectionFloatName: strafeDirection
   jumpingBoolName: isJumping
   fallingBoolName: isFalling
   sittingBoolName: isSitting
@@ -5942,11 +5945,19 @@ MonoBehaviour:
   teleportedBoolName: isPorted
   attackTriggerName: Attack
   attackStateTag: Attack
+  stunStateTag: Stun
   hitTriggerName: isHit
+  stunnedTriggerName: isStunned
   walkAnimationBaseSpeed: 0.8
   runAnimationBaseSpeed: 1
   jumpAnimationBaseSpeed: 1
   runParticleSystem: {fileID: 7560775613690615504}
+  controlUpperBodyLayerWeight: 1
+  upperBodyLayerName: Upper Body
+  upperBodyIdleWeight: 0
+  upperBodyAttackWeight: 1
+  upperBodySpeedParam: UpperBodySpeed
+  upperBodySpeedDefault: 1
   debugLogs: 0
 --- !u!114 &8202753440923050041
 MonoBehaviour:
@@ -5982,7 +5993,7 @@ MonoBehaviour:
   ragdollBodies: []
   disableAnimatorOnRagdoll: 1
   initializeAsKinematic: 1
-  deathImpulseForce: 12
+  deathImpulseForce: 33
   impulseMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6042,6 +6053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NpcIdentity
   identifierColor: {r: 0.039159846, g: 0.754717, b: 0.34582722, a: 1}
   targetIndicator: {fileID: 0}
+  previewIcon: {fileID: 0}
 --- !u!114 &-2185979523506699626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6055,6 +6067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FogHidable
   isAlly: 0
+  debugLogs: 0
   minimapColor: {r: 0.023529412, g: 0.7529412, b: 0.34509805, a: 1}
   minimapSprite: {fileID: 0}
   minimapIgnoreFog: 0
@@ -6091,6 +6104,7 @@ MonoBehaviour:
   navMeshAgent: {fileID: 5940510393212342073}
   respawnPoint: {fileID: 0}
   autoPickRespawnPoint: 1
+  autoRespawn: 1
   respawnDelay: 3
   warpNavAgent: 1
 --- !u!114 &5036128873748252586
@@ -6124,7 +6138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22111044b5a224c139e17e1054b96a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilityRunner
-  abilityConfig: {fileID: 0}
   abilityId: Reveal
   useInput: 0
   isPlayer: 0
@@ -6537,6 +6550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorldSpaceBillboard
   targetCamera: {fileID: 0}
   lockYAxis: 0
+  useRenderingCamera: 0
 --- !u!1 &5217284982952724537
 GameObject:
   m_ObjectHideFlags: 0
@@ -12822,6 +12836,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   hitPointBias: 0
+  weaponKillTag: WeaponKill
+  weaponStunTag: WeaponStun
+  ignoreSphereColliders: 1
 --- !u!1 &8945044522417601190
 GameObject:
   m_ObjectHideFlags: 0
